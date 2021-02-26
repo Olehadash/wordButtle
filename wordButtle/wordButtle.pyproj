@@ -64,6 +64,7 @@
     <Content Include="wordButtle\static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="wordButtle\static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="wordButtle\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wordButtle\static\rus.txt" />
     <Content Include="wordButtle\static\scripts\bootstrap.js" />
     <Content Include="wordButtle\static\scripts\bootstrap.min.js" />
     <Content Include="wordButtle\static\scripts\jquery-1.10.2.intellisense.js" />
