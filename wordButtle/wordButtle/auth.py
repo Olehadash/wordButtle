@@ -62,7 +62,13 @@ def connectroom():
     CreatorName = request.form.get('CreatorName')
     ConnectorName = request.form.get('ConnectorName')
 
-    room = Rooms.query.join(Rooms.Name).filter(Rooms.Name == Name, Rooms.CreatorName == CreatorName, Rooms.isShown == 0)
+    rooms = Rooms.query.filter_by(Name=Name).all()
+    room = Rooms.query.filter_by(Name=Name).first()
+    for r in rooms:
+        if r.isShown == 0:
+            room = r
+            break
+
     if not room:
         return 'NO ROOM'
     if room.isShown == 1:
