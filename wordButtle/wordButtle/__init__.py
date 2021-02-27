@@ -32,6 +32,7 @@ def connect():
 
 @socketio.on('disconnect')
 def disconnect():
+    
     print('Client disconnected')
 
 @socketio.on('message')

@@ -30,15 +30,23 @@ def createroom():
     Name = request.form.get('Name')
     CreatorName = request.form.get('CreatorName')
 
-    room = Rooms(Name=Name, CreatorName=CreatorName, ConnectorName="-", isShown=0)
-    db.session.add(room)
-    db.session.commit()
+    r1 = Rooms.query.filter_by(Name=Name).first()
+    if not r1:
+        room = Rooms(Name=Name, CreatorName=CreatorName, ConnectorName="-", isShown=0)
+        db.session.add(room)
+        db.session.commit()
 
     time.sleep(2)
 
     r = Rooms.query.all()
-
+    
     return jsonify(rooms = [i.serialize for i in r]),200
+
+def WaytandDelete(name):
+    time.sleep(120)
+    room = Rooms.query.filter_by(Name=name).first()
+    db.session.delete(room)
+    db.session.commit()
 
 @auth.route('/deleteroom', methods=['POST'])
 def deleteroom():
