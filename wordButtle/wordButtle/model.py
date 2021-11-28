@@ -19,6 +19,34 @@ class rus (db.Model):
                 'heb' : self.heb,
                 'ger' : self.ger
             }
+class eng (db.Model):
+    id = db.Column(db.Integer, primary_key=True) # primary keys are required by SQLAlchemy
+    word = db.Column(db.String(30))
+    heb = db.Column(db.String(30))
+    
+    def __repr__(self):
+        return '<rusкак %r>' % self.word
+
+    @property
+    def serialize(self):
+        return {
+                'id' : self.id,
+                'word' : self.word,
+                'heb' : self.heb,
+            }
+class heb (db.Model):
+    id = db.Column(db.Integer, primary_key=True) # primary keys are required by SQLAlchemy
+    word = db.Column(db.String(30))
+    
+    def __repr__(self):
+        return '<rusкак %r>' % self.word
+
+    @property
+    def serialize(self):
+        return {
+                'id' : self.id,
+                'word' : self.word
+            }
 
 class User(db.Model):
      id = db.Column(db.Integer, primary_key=True, unique = True)
@@ -130,4 +158,129 @@ class rusltab (db.Model):
                 'l30' : self.l30,
                 'l31' : self.l31,
                 'l32' : self.l32
+            }
+class englab (db.Model):
+    id = db.Column(db.String(10), primary_key=True, unique=True)
+    a = db.Column(db.Integer)
+    b = db.Column(db.Integer)
+    c = db.Column(db.Integer)
+    d = db.Column(db.Integer)
+    e = db.Column(db.Integer)
+    f = db.Column(db.Integer)
+    g = db.Column(db.Integer)
+    h = db.Column(db.Integer)
+    i = db.Column(db.Integer)
+    j = db.Column(db.Integer)
+    k = db.Column(db.Integer)
+    l = db.Column(db.Integer)
+    m = db.Column(db.Integer)
+    n = db.Column(db.Integer)
+    o = db.Column(db.Integer)
+    p = db.Column(db.Integer)
+    q = db.Column(db.Integer)
+    r = db.Column(db.Integer)
+    s = db.Column(db.Integer)
+    t = db.Column(db.Integer)
+    u = db.Column(db.Integer)
+    v = db.Column(db.Integer)
+    w = db.Column(db.Integer)
+    x = db.Column(db.Integer)
+    y = db.Column(db.Integer)
+    z = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<englTab %r>' % self.id
+
+    @property
+    def serialize(self):
+       return {
+                'a' : self.a,
+                'b' : self.b,
+                'c' : self.c,
+                'd' : self.d,
+                'e' : self.e,
+                'f' : self.f,
+                'g' : self.g,
+                'h' : self.h,
+                'i' : self.i,
+                'j' : self.j,
+                'k' : self.k,
+                'l' : self.l,
+                'm' : self.m,
+                'n' : self.n,
+                'o' : self.o,
+                'p' : self.p,
+                'q' : self.q,
+                'r' : self.r,
+                's' : self.s,
+                't' : self.t,
+                'u' : self.u,
+                'v' : self.v,
+                'w' : self.w,
+                'x' : self.x,
+                'y' : self.y,
+                'z' : self.z
+            }
+class hebltab (db.Model):
+    id = db.Column(db.String(10), primary_key=True, unique=True)
+    l1 = db.Column(db.Integer)
+    l2 = db.Column(db.Integer)
+    l3 = db.Column(db.Integer)
+    l4 = db.Column(db.Integer)
+    l5 = db.Column(db.Integer)
+    l6 = db.Column(db.Integer)
+    l7 = db.Column(db.Integer)
+    l8 = db.Column(db.Integer)
+    l9 = db.Column(db.Integer)
+    l10 = db.Column(db.Integer)
+    l11 = db.Column(db.Integer)
+    l12 = db.Column(db.Integer)
+    l13 = db.Column(db.Integer)
+    l14 = db.Column(db.Integer)
+    l15 = db.Column(db.Integer)
+    l16 = db.Column(db.Integer)
+    l17 = db.Column(db.Integer)
+    l18 = db.Column(db.Integer)
+    l19 = db.Column(db.Integer)
+    l20 = db.Column(db.Integer)
+    l21 = db.Column(db.Integer)
+    l22 = db.Column(db.Integer)
+    l23 = db.Column(db.Integer)
+    l24 = db.Column(db.Integer)
+    l25 = db.Column(db.Integer)
+    l26 = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<hebLTab %r>' % self.id
+
+    @property
+    def serialize(self):
+       return {
+                'id' : self.id,
+                'l1' : self.l1,
+                'l2' : self.l2,
+                'l3' : self.l3,
+                'l4' : self.l4,
+                'l5' : self.l5,
+                'l6' : self.l6,
+                'l7' : self.l7,
+                'l8' : self.l8,
+                'l9' : self.l9,
+                'l10' : self.l10,
+                'l11' : self.l11,
+                'l12' : self.l12,
+                'l13' : self.l13,
+                'l14' : self.l14,
+                'l15' : self.l15,
+                'l16' : self.l16,
+                'l17' : self.l17,
+                'l18' : self.l18,
+                'l19' : self.l19,
+                'l20' : self.l20,
+                'l21' : self.l21,
+                'l22' : self.l22,
+                'l23' : self.l23,
+                'l24' : self.l24,
+                'l25' : self.l25,
+                'l26' : self.l26
             }

@@ -38,6 +38,12 @@
     <Compile Include="wordButtle\model.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="wordButtle\csvReader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wordButtle\hebGenerate.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="wordButtle\trans.py">
       <SubType>Code</SubType>
     </Compile>
@@ -64,6 +70,7 @@
     <Content Include="wordButtle\static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="wordButtle\static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="wordButtle\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wordButtle\static\heb.txt" />
     <Content Include="wordButtle\static\rus.txt" />
     <Content Include="wordButtle\static\scripts\bootstrap.js" />
     <Content Include="wordButtle\static\scripts\bootstrap.min.js" />
@@ -80,6 +87,7 @@
     <Content Include="wordButtle\static\scripts\respond.js" />
     <Content Include="wordButtle\static\scripts\respond.min.js" />
     <Content Include="wordButtle\static\scripts\_references.js" />
+    <Content Include="wordButtle\static\eng.txt" />
     <Content Include="wordButtle\templates\about.html" />
     <Content Include="wordButtle\templates\contact.html" />
     <Content Include="wordButtle\templates\index.html" />

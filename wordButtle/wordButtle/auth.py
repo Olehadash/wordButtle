@@ -12,13 +12,17 @@ def login_post():
     Name = request.form.get('Name')
     DeviceID = request.form.get('DeviceID')
 
-    user = User.query.filter_by(Name=Name).first()
+    user = User.query.filter_by(DeviceID = DeviceID).first()
 
     if not user:
         new_user = User(Name = Name, DeviceID = DeviceID)
         db.session.add(new_user)
         db.session.commit()
         return 'USER CREATED'
+    else:
+        user.Name = Name;
+        db.session.commit()
+        return 'USER UPDATED'
 
     if user.DeviceID != DeviceID:
         return 'USER EXIST'
